@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listaTareas">
+
+    <fragment
+        android:id="@+id/listaTareas"
+        android:name="cbass.apptareasroom.ui.ListaTareas"
+        android:label="ListaTareas" >
+        <action
+            android:id="@+id/action_listaTareas_to_detalleTarea"
+            app:destination="@id/detalleTarea" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleTarea"
+        android:name="cbass.apptareasroom.ui.AgregarTarea"
+        android:label="fragment_detalle_tarea"
+        tools:layout="@layout/fragment_agregar_tarea" >
+        <action
+            android:id="@+id/action_detalleTarea_to_listaTareas"
+            app:destination="@id/listaTareas" />
+    </fragment>
+</navigation>
