@@ -3,23 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/listaTareas">
-
+    app:startDestination="@id/listaTareas2">
     <fragment
-        android:id="@+id/listaTareas"
+        android:id="@+id/listaTareas2"
         android:name="cbass.apptareasroom.ui.ListaTareas"
         android:label="ListaTareas" >
         <action
-            android:id="@+id/action_listaTareas_to_detalleTarea"
-            app:destination="@id/detalleTarea" />
+            android:id="@+id/action_listaTareas2_to_agregarTarea"
+            app:destination="@id/agregarTarea" />
     </fragment>
     <fragment
-        android:id="@+id/detalleTarea"
+        android:id="@+id/agregarTarea"
         android:name="cbass.apptareasroom.ui.AgregarTarea"
-        android:label="fragment_detalle_tarea"
+        android:label="fragment_agregar_tarea"
         tools:layout="@layout/fragment_agregar_tarea" >
         <action
-            android:id="@+id/action_detalleTarea_to_listaTareas"
-            app:destination="@id/listaTareas" />
+            android:id="@+id/action_agregarTarea_to_listaTareas2"
+            app:destination="@id/listaTareas2" />
     </fragment>
 </navigation>
